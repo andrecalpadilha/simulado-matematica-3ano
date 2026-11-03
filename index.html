@@ -251,26 +251,36 @@
       document.getElementById("barra").style.width =
         `${(respondidas / total) * 100}%`;
     }
-async function enviarResultado(dados) {
+function enviarResultado(dados) {
   const url = "https://script.google.com/macros/s/AKfycby-Srsg6ewu6-NwzuZVSL02c4HeykUSGnYdqjyNIJOkLEEUxEsZC17kC4gBGvKrdAad/exec";
 
-  try {
-    await fetch(url, {
-      method: "POST",
-      mode: "no-cors",
-      headers: {
-        "Content-Type": "text/plain;charset=utf-8"
-      },
-      body: JSON.stringify(dados)
-    });
+  const iframe = document.createElement("iframe");
+  iframe.name = "envioSimulado";
+  iframe.style.display = "none";
+  document.body.appendChild(iframe);
 
-    document.getElementById("statusEnvio").textContent =
-      "Envio solicitado. Confira com seu professor se o resultado foi registrado.";
+  const formulario = document.createElement("form");
+  formulario.method = "POST";
+  formulario.action = url;
+  formulario.target = "envioSimulado";
 
-  } catch (erro) {
-    document.getElementById("statusEnvio").textContent =
-      "Não foi possível enviar os dados. Avise seu professor.";
-  }
+  const campo = document.createElement("input");
+  campo.type = "hidden";
+  campo.name = "payload";
+  campo.value = JSON.stringify(dados);
+
+  formulario.appendChild(campo);
+  document.body.appendChild(formulario);
+
+  formulario.submit();
+
+  document.getElementById("statusEnvio").textContent =
+    "Resultado enviado. Aguarde a confirmação do professor.";
+
+  setTimeout(() => {
+    formulario.remove();
+    iframe.remove();
+  }, 10000);
 }
     function finalizarSimulado() {
       if (finalizado) return;
