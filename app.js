@@ -263,11 +263,16 @@ async function submit(expired) {
       redirect: 'follow'
     });
 
-    const data = await response.json();
+    const texto = await response.text();
 
-    if (!response.ok || !data.ok) {
-      throw new Error(data.error || 'O servidor não confirmou o envio.');
-    }
+console.log('Status HTTP:', response.status);
+console.log('Resposta do servidor:', texto);
+
+const data = JSON.parse(texto);
+
+if (!response.ok || !data.ok) {
+  throw new Error(data.error || data.mensagem || 'O servidor não confirmou o envio.');
+}
 
     clearInterval(timer);
 
