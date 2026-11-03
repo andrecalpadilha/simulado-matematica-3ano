@@ -1,0 +1,260 @@
+[
+  {
+    "n": 1,
+    "tipo": "Conexão",
+    "enunciado": "Uma estudante guardou R$ 2.500,00 em uma poupança que rende 4% ao mês com juros compostos, para comprar um notebook. Após 3 meses, sem nenhum saque, o valor disponível nessa aplicação será de aproximadamente:",
+    "alternativas": ["R$ 2.800,00", "R$ 2.812,16", "R$ 2.850,00", "R$ 2.900,00", "R$ 3.000,00"],
+    "gabarito": "B",
+    "resolucao": "Nos juros compostos, utilizamos M = C(1+i)^t. Substituindo os valores: M = 2500(1+0,04)^3. Assim, M = 2500 × 1,04³ = 2500 × 1,124864 = R$ 2.812,16. Portanto, a alternativa correta é B."
+  },
+  {
+    "n": 2,
+    "tipo": "Conexão",
+    "enunciado": "Na festa de formatura, a comissão de formatura precisa escolher a combinação de roupa para a apresentação: 4 modelos de blusa, 3 modelos de calça e 2 tipos de sapato. O número total de looks diferentes possíveis é:",
+    "alternativas": ["9", "12", "18", "24", "36"],
+    "gabarito": "D",
+    "resolucao": "Pelo princípio fundamental da contagem, multiplicamos as possibilidades de cada escolha: 4 × 3 × 2 = 24. Portanto, podem ser formados 24 looks diferentes. Alternativa D."
+  },
+  {
+    "n": 3,
+    "tipo": "Conexão",
+    "enunciado": "Dois amigos compraram juntos 5 canetas e 3 cadernos por R$ 28,00. Em outra loja, 2 canetas e 4 cadernos custaram R$ 28,00. O preço de uma caneta e de um caderno, respectivamente, é:",
+    "alternativas": ["R$ 2,00 e R$ 6,00", "R$ 4,00 e R$ 4,00", "R$ 3,00 e R$ 5,00", "R$ 5,00 e R$ 3,00", "R$ 6,00 e R$ 2,00"],
+    "gabarito": "A",
+    "resolucao": "Chamamos o preço da caneta de x e o do caderno de y. Montamos o sistema: 5x + 3y = 28 e 2x + 4y = 28. Simplificando a segunda equação: x + 2y = 14, logo x = 14 − 2y. Substituindo na primeira: 5(14 − 2y) + 3y = 28. Então 70 − 10y + 3y = 28; −7y = −42; y = 6. Assim, x = 14 − 12 = 2. A caneta custa R$ 2,00 e o caderno R$ 6,00. Alternativa A."
+  },
+  {
+    "n": 4,
+    "tipo": "Conexão",
+    "enunciado": "Ao medir a probabilidade de um evento, um aluno obteve o resultado 0,666... (dízima periódica). A fração geratriz correspondente a esse número é:",
+    "alternativas": ["2/3", "3/5", "5/8", "1/3", "1/6"],
+    "gabarito": "A",
+    "resolucao": "Seja x = 0,666... Multiplicando por 10: 10x = 6,666... Subtraindo a primeira equação da segunda: 10x − x = 6,666... − 0,666... Portanto, 9x = 6 e x = 6/9 = 2/3. Alternativa A."
+  },
+  {
+    "n": 5,
+    "tipo": "Conexão",
+    "enunciado": "A área de um terreno retangular é 48 m². Sabe-se que o comprimento é 4 metros a mais que o dobro da largura. As dimensões desse terreno (largura e comprimento) são:",
+    "alternativas": ["4 m e 12 m", "3 m e 16 m", "6 m e 8 m", "5 m e 9,6 m", "2 m e 24 m"],
+    "gabarito": "A",
+    "resolucao": "Chamamos a largura de x. O comprimento será 2x + 4. Como a área é 48 m²: x(2x + 4) = 48. Testando x = 4: o comprimento será 2 × 4 + 4 = 12. A área é 4 × 12 = 48 m². Portanto, as dimensões são 4 m e 12 m. Alternativa A."
+  },
+  {
+    "n": 6,
+    "tipo": "Conexão",
+    "enunciado": "Para calcular o MMC e o MDC de dois números em um problema de engenharia, foi necessário decompor 84 em fatores primos. A decomposição correta é:",
+    "alternativas": ["2² · 3 · 7", "2³ · 3 · 7", "2² · 21", "4 · 3 · 7", "2 · 6 · 7"],
+    "gabarito": "A",
+    "resolucao": "Dividimos 84 sucessivamente por números primos: 84 ÷ 2 = 42; 42 ÷ 2 = 21; 21 ÷ 3 = 7; 7 ÷ 7 = 1. Assim, 84 = 2 × 2 × 3 × 7 = 2² · 3 · 7. Alternativa A."
+  },
+  {
+    "n": 7,
+    "tipo": "Conexão",
+    "enunciado": "Em uma pesquisa com 200 jovens sobre preferência de modalidade esportiva, 35% escolheram futebol. O número de jovens que preferiram futebol foi:",
+    "alternativas": ["35", "50", "70", "100", "135"],
+    "gabarito": "C",
+    "resolucao": "Calculamos 35% de 200: 35/100 × 200 = 0,35 × 200 = 70. Portanto, 70 jovens escolheram futebol. Alternativa C."
+  },
+  {
+    "n": 8,
+    "tipo": "Conexão",
+    "enunciado": "Uma pista circular de atletismo tem raio de 35 m. Considerando π = 22/7, o comprimento aproximado de uma volta completa nessa pista, em metros, é:",
+    "alternativas": ["110", "220", "440", "770", "1.100"],
+    "gabarito": "B",
+    "resolucao": "O comprimento da circunferência é C = 2πr. Substituindo: C = 2 × 22/7 × 35. Simplificando 35 ÷ 7 = 5: C = 2 × 22 × 5 = 220 m. Alternativa B."
+  },
+  {
+    "n": 9,
+    "tipo": "Conexão",
+    "enunciado": "Uma caixa de transporte tem formato de paralelepípedo com dimensões internas 40 cm × 30 cm × 25 cm. A capacidade dessa caixa, em litros, é: (lembre-se: 1 dm³ = 1 litro e 1 dm = 10 cm)",
+    "alternativas": ["15 litros", "30 litros", "45 litros", "60 litros", "75 litros"],
+    "gabarito": "B",
+    "resolucao": "Calculamos o volume: V = 40 × 30 × 25 = 30.000 cm³. Como 1 litro corresponde a 1.000 cm³, dividimos 30.000 por 1.000. Obtemos 30 litros. Alternativa B."
+  },
+  {
+    "n": 10,
+    "tipo": "Conexão",
+    "enunciado": "As idades dos participantes de um clube de leitura são: 14, 15, 14, 16, 15, 14 e 17 anos. A moda e a mediana dessas idades, respectivamente, são:",
+    "alternativas": ["14 e 14", "14 e 15", "15 e 14", "15 e 15", "14 e 16"],
+    "gabarito": "B",
+    "resolucao": "A moda é o valor que mais aparece. O número 14 aparece três vezes, sendo a moda. Organizamos as idades: 14, 14, 14, 15, 15, 16, 17. Como temos sete valores, a mediana é o quarto valor, que é 15. Portanto, moda 14 e mediana 15. Alternativa B."
+  },
+  {
+    "n": 11,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Ao simplificar a expressão √(50) · √(32) ÷ √(2) para encontrar a medida de um lado de um triângulo, um aluno obteve o valor:",
+    "alternativas": ["20√2", "40", "20√5", "10√2", "80"],
+    "gabarito": "A",
+    "resolucao": "Podemos reunir os radicais: √50 × √32 ÷ √2 = √(50 × 32 ÷ 2) = √800. Como 800 = 400 × 2, temos √800 = √400 × √2 = 20√2. Alternativa A."
+  },
+  {
+    "n": 12,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Uma loja de eletrônicos anunciou um smartphone por R$ 1.800,00. Na primeira semana de promoção, ofereceu 20% de desconto. Na semana seguinte, aplicou mais 15% de desconto sobre o preço já reduzido. O valor final pago pelo cliente foi:",
+    "alternativas": ["R$ 1.224,00", "R$ 1.260,00", "R$ 1.350,00", "R$ 1.440,00", "R$ 1.530,00"],
+    "gabarito": "A",
+    "resolucao": "Primeiro calculamos o desconto de 20%: 1.800 × 0,20 = 360. O preço passa a ser R$ 1.440,00. Depois aplicamos 15% sobre esse novo preço: 1.440 × 0,15 = 216. Subtraindo: 1.440 − 216 = R$ 1.224,00. Alternativa A."
+  },
+  {
+    "n": 13,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Em uma circunferência, o arco AB mede 96°. Um ângulo inscrito que “enxerga” esse mesmo arco AB tem medida igual a:",
+    "alternativas": ["48°", "96°", "192°", "32°", "64°"],
+    "gabarito": "A",
+    "resolucao": "A medida de um ângulo inscrito é igual à metade da medida do arco correspondente. Assim: 96° ÷ 2 = 48°. Alternativa A."
+  },
+  {
+    "n": 14,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Um tanque cilíndrico de armazenamento de água tem raio da base 1,5 m e altura 4 m. Considerando π = 3,14, a capacidade aproximada desse tanque, em m³, é:",
+    "alternativas": ["18,84", "28,26", "37,68", "56,52", "75,36"],
+    "gabarito": "B",
+    "resolucao": "O volume do cilindro é V = πr²h. Substituindo: V = 3,14 × 1,5² × 4. Como 1,5² = 2,25, temos V = 3,14 × 2,25 × 4 = 3,14 × 9 = 28,26 m³. Alternativa B."
+  },
+  {
+    "n": 15,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Duas retas paralelas são cortadas por uma transversal. Um dos ângulos formados mede 125°. A medida do ângulo correspondente a esse ângulo é:",
+    "alternativas": ["55°", "90°", "125°", "180°", "235°"],
+    "gabarito": "C",
+    "resolucao": "Quando duas retas paralelas são cortadas por uma transversal, os ângulos correspondentes possuem a mesma medida. Portanto, o ângulo correspondente mede 125°. Alternativa C."
+  },
+  {
+    "n": 16,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Ao fatorar a expressão 81x² − 49 para resolver uma equação, um estudante encontrou corretamente:",
+    "alternativas": ["(9x − 7)²", "(9x + 7)²", "(9x − 7)(9x + 7)", "(81x − 49)(x + 1)", "(9x − 7)(9x − 7)"],
+    "gabarito": "C",
+    "resolucao": "Reconhecemos uma diferença de dois quadrados: 81x² − 49 = (9x)² − 7². Aplicamos a identidade a² − b² = (a − b)(a + b). Portanto, a fatoração é (9x − 7)(9x + 7). Alternativa C."
+  },
+  {
+    "n": 17,
+    "tipo": "Habilidade Atual",
+    "enunciado": "A expressão algébrica que representa a área de um quadrado de lado (x + 5) é x² + 10x + 25. Essa expressão pode ser reescrita de forma fatorada como:",
+    "alternativas": ["(x + 5)²", "(x − 5)²", "(x + 10)(x + 2,5)", "(x + 5)(x − 5)", "(x + 25)(x + 1)"],
+    "gabarito": "A",
+    "resolucao": "A expressão x² + 10x + 25 é um trinômio quadrado perfeito. O primeiro termo é x², o último é 5² e o termo do meio é 2 × x × 5 = 10x. Logo, a fatoração é (x + 5)². Alternativa A."
+  },
+  {
+    "n": 18,
+    "tipo": "Habilidade Atual",
+    "enunciado": "A função que modela a altura de um objeto em queda livre a partir de certa altura é do tipo f(t) = √(h − 5t), em que t é o tempo. O domínio dessa função, considerando apenas valores reais possíveis, é:",
+    "alternativas": ["{t ∈ ℝ | t ≥ 0}", "{t ∈ ℝ | 0 ≤ t ≤ h/5}", "{t ∈ ℝ | t ≥ h/5}", "{t ∈ ℝ | t ≠ h/5}", "{t ∈ ℝ | t > 0}"],
+    "gabarito": "B",
+    "resolucao": "Para que a raiz quadrada tenha resultado real, o radicando deve ser maior ou igual a zero: h − 5t ≥ 0. Isolando t: −5t ≥ −h. Ao dividir por −5, invertemos o sinal da desigualdade: t ≤ h/5. Como o tempo também deve ser não negativo, temos 0 ≤ t ≤ h/5. Alternativa B."
+  },
+  {
+    "n": 19,
+    "tipo": "Habilidade Atual",
+    "enunciado": "O valor pago por uma corrida de táxi é composto por uma bandeirada de R$ 6,00 mais R$ 2,80 por quilômetro rodado. A função que melhor representa o valor total V em função da distância d (em km) é:",
+    "alternativas": ["V = 2,80d", "V = 6d + 2,80", "V = 2,80d + 6", "V = 6d − 2,80", "V = 8,80d"],
+    "gabarito": "C",
+    "resolucao": "O valor variável depende da distância: R$ 2,80 por quilômetro, representado por 2,80d. A bandeirada é um valor fixo de R$ 6,00. Somamos as duas parcelas: V = 2,80d + 6. Alternativa C."
+  },
+  {
+    "n": 20,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Uma escada de 17 m de comprimento está apoiada em uma parede vertical. A base da escada dista 8 m da parede. A altura em que a escada toca a parede é:",
+    "alternativas": ["9 m", "12 m", "15 m", "16 m", "25 m"],
+    "gabarito": "C",
+    "resolucao": "A escada, a parede e o chão formam um triângulo retângulo. Aplicamos Pitágoras: 17² = 8² + h². Assim, 289 = 64 + h²; h² = 225; h = √225 = 15. A altura é 15 m. Alternativa C."
+  },
+  {
+    "n": 21,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Em uma urna há 7 bolas numeradas de 1 a 7. Retirando-se uma bola ao acaso, a probabilidade de o número ser ímpar é:",
+    "alternativas": ["2/7", "3/7", "4/7", "5/7", "1/2"],
+    "gabarito": "C",
+    "resolucao": "Os números ímpares entre 1 e 7 são 1, 3, 5 e 7. Portanto, temos 4 casos favoráveis em um total de 7 possibilidades. A probabilidade é 4/7. Alternativa C."
+  },
+  {
+    "n": 22,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Duas retas paralelas são cortadas por três transversais, formando segmentos proporcionais. Se os segmentos em uma das transversais medem 6 cm e 9 cm, e o segmento correspondente na outra transversal mede 12 cm, o segmento desconhecido mede:",
+    "alternativas": ["8 cm", "15 cm", "18 cm", "20 cm", "24 cm"],
+    "gabarito": "C",
+    "resolucao": "Pelo Teorema de Tales, os segmentos correspondentes são proporcionais. Montamos 6/9 = 12/x. Multiplicando em cruz: 6x = 108. Dividindo por 6: x = 18 cm. Alternativa C."
+  },
+  {
+    "n": 23,
+    "tipo": "Habilidade Atual",
+    "enunciado": "A tabela mostra a quantidade de peças produzidas (x) e o custo total em reais (y) de uma pequena fábrica. Qual função representa a relação entre a quantidade produzida e o custo total?",
+    "alternativas": ["y = 10x + 30", "y = 15x", "y = 10x", "y = 20x − 20", "y = 5x + 55"],
+    "tabela": [["x (peças)", "5", "10", "15", "20"], ["y (R$)", "80", "130", "180", "230"]],
+    "gabarito": "A",
+    "resolucao": "Observamos que, quando a produção aumenta de 5 peças, o custo aumenta R$ 50,00. Logo, cada peça acrescenta R$ 10,00 ao custo. A função tem a forma y = 10x + b. Usando o ponto (5, 80): 80 = 10 × 5 + b. Então 80 = 50 + b e b = 30. Portanto, y = 10x + 30. Alternativa A."
+  },
+  {
+    "n": 24,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Simplificando a expressão (x + 6)² − x², um aluno obteve corretamente:",
+    "alternativas": ["12x + 36", "12x", "36", "12x − 36", "24x"],
+    "gabarito": "A",
+    "resolucao": "Desenvolvemos o quadrado da soma: (x + 6)² = x² + 12x + 36. Subtraindo x²: x² + 12x + 36 − x². Os termos x² se anulam, restando 12x + 36. Alternativa A."
+  },
+  {
+    "n": 25,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Em um triângulo retângulo, a hipotenusa mede 25 cm e um dos catetos mede 15 cm. A medida do outro cateto é:",
+    "alternativas": ["10 cm", "15 cm", "20 cm", "25 cm", "30 cm"],
+    "gabarito": "C",
+    "resolucao": "Pelo Teorema de Pitágoras: 25² = 15² + x². Assim, 625 = 225 + x². Logo, x² = 400 e x = √400 = 20 cm. Alternativa C."
+  },
+  {
+    "n": 26,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Carlos investiu R$ 5.000,00 em um fundo que rende 3% ao mês com juros compostos. Após 2 meses, o montante será de:",
+    "alternativas": ["R$ 5.300,00", "R$ 5.304,50", "R$ 5.400,00", "R$ 5.450,00", "R$ 5.500,00"],
+    "gabarito": "B",
+    "resolucao": "Usamos M = C(1+i)^t. Substituindo: M = 5000(1+0,03)² = 5000 × 1,03² = 5000 × 1,0609 = R$ 5.304,50. Alternativa B."
+  },
+  {
+    "n": 27,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Ao simplificar a expressão (4x² − 5x + 7) − (2x² + 3x − 4), o resultado obtido é:",
+    "alternativas": ["2x² − 8x + 11", "2x² − 2x + 11", "6x² − 8x + 3", "2x² − 8x + 3", "2x² + 2x + 11"],
+    "gabarito": "A",
+    "resolucao": "Distribuímos o sinal negativo aos termos do segundo parêntese: 4x² − 5x + 7 − 2x² − 3x + 4. Agrupamos os termos semelhantes: (4x² − 2x²) + (−5x − 3x) + (7 + 4). O resultado é 2x² − 8x + 11. Alternativa A."
+  },
+  {
+    "n": 28,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Três irmãos vão dividir R$ 1.200,00 na razão 2 : 3 : 5. O valor que caberá ao irmão que recebe a maior parte é:",
+    "alternativas": ["R$ 240,00", "R$ 360,00", "R$ 480,00", "R$ 600,00", "R$ 720,00"],
+    "gabarito": "D",
+    "resolucao": "Somamos as partes da razão: 2 + 3 + 5 = 10. Cada parte corresponde a 1200 ÷ 10 = R$ 120,00. O irmão que recebe a maior parte fica com 5 partes: 5 × 120 = R$ 600,00. Alternativa D."
+  },
+  {
+    "n": 29,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Dois triângulos semelhantes têm lados correspondentes na razão 3 : 5. Se o perímetro do triângulo menor é 36 cm, o perímetro do triângulo maior é:",
+    "alternativas": ["48 cm", "54 cm", "60 cm", "72 cm", "90 cm"],
+    "gabarito": "C",
+    "resolucao": "Como os triângulos são semelhantes, seus perímetros seguem a mesma razão dos lados correspondentes. Temos 3/5 = 36/x. Multiplicando em cruz: 3x = 180. Portanto, x = 60 cm. Alternativa C."
+  },
+  {
+    "n": 30,
+    "tipo": "Habilidade Atual",
+    "enunciado": "Uma piscina tem capacidade de 45 m³. Quantos litros de água são necessários para enchê-la completamente?",
+    "alternativas": ["45 litros", "450 litros", "4.500 litros", "45.000 litros", "450.000 litros"],
+    "gabarito": "D",
+    "resolucao": "Sabemos que 1 m³ equivale a 1.000 litros. Portanto, 45 m³ = 45 × 1.000 = 45.000 litros. Alternativa D."
+  },
+  {
+    "n": 31,
+    "tipo": "Habilidade Atual",
+    "enunciado": "A distância média entre a Terra e o Sol é de aproximadamente 1,5 × 10¹¹ metros. Em notação decimal, esse valor corresponde a:",
+    "alternativas": ["15.000.000.000 m", "150.000.000.000 m", "1.500.000.000 m", "15.000.000 m", "1.500.000.000.000 m"],
+    "gabarito": "B",
+    "resolucao": "O expoente 11 indica que devemos deslocar a vírgula 11 casas para a direita. Assim, 1,5 × 10¹¹ = 150.000.000.000 metros. Alternativa B."
+  },
+  {
+    "n": 32,
+    "tipo": "Habilidade Atual",
+    "enunciado": "A tabela mostra a quantidade de livros emprestados pela biblioteca escolar em quatro semanas. Qual foi a média de livros emprestados por semana?",
+    "alternativas": ["54", "56", "59", "62", "64"],
+    "tabela": [["Semana", "1ª", "2ª", "3ª", "4ª"], ["Livros", "48", "62", "55", "71"]],
+    "gabarito": "C",
+    "resolucao": "Para calcular a média, somamos as quantidades e dividimos pelo número de semanas: (48 + 62 + 55 + 71) ÷ 4 = 236 ÷ 4 = 59. Portanto, a média foi de 59 livros por semana. Alternativa C."
+  }
+]
