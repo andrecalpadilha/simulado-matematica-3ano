@@ -1,260 +1,450 @@
 [
   {
     "n": 1,
-    "tipo": "Conexão",
-    "enunciado": "Uma estudante guardou R$ 2.500,00 em uma poupança que rende 4% ao mês com juros compostos, para comprar um notebook. Após 3 meses, sem nenhum saque, o valor disponível nessa aplicação será de aproximadamente:",
-    "alternativas": ["R$ 2.800,00", "R$ 2.812,16", "R$ 2.850,00", "R$ 2.900,00", "R$ 3.000,00"],
-    "gabarito": "B",
-    "resolucao": "Nos juros compostos, utilizamos M = C(1+i)^t. Substituindo os valores: M = 2500(1+0,04)^3. Assim, M = 2500 × 1,04³ = 2500 × 1,124864 = R$ 2.812,16. Portanto, a alternativa correta é B."
+    "tipo": "Conexões",
+    "enunciado": "Uma família pretende guardar R$ 8.000,00 para realizar uma viagem. O dinheiro será aplicado durante 6 meses em uma modalidade que rende juros compostos de 2% ao mês. Considerando que não haverá depósitos ou retiradas nesse período e utilizando 1,02⁶ ≈ 1,1262, qual será aproximadamente o montante ao final da aplicação?",
+    "alternativas": [
+      "R$ 8.160,00",
+      "R$ 8.480,00",
+      "R$ 8.800,00",
+      "R$ 9.009,60",
+      "R$ 9.600,00"
+    ],
+    "gabarito": "D",
+    "resolucao": "Nos juros compostos, utilizamos M = C · (1 + i)ⁿ. O capital é R$ 8.000,00, a taxa é 0,02 e o tempo é de 6 meses. Assim: M = 8.000 · (1,02)⁶. Utilizando a aproximação fornecida: M = 8.000 · 1,1262 = 9.009,60. Portanto, o montante será aproximadamente R$ 9.009,60."
   },
   {
     "n": 2,
-    "tipo": "Conexão",
-    "enunciado": "Na festa de formatura, a comissão de formatura precisa escolher a combinação de roupa para a apresentação: 4 modelos de blusa, 3 modelos de calça e 2 tipos de sapato. O número total de looks diferentes possíveis é:",
-    "alternativas": ["9", "12", "18", "24", "36"],
+    "tipo": "Conexões",
+    "enunciado": "Uma escola está organizando uma feira de profissões. Para identificar os participantes de uma atividade, cada estudante deverá escolher uma camiseta entre 4 modelos, uma calça entre 3 modelos e um crachá entre 2 modelos. Considerando que todas as combinações são possíveis, quantas identificações diferentes podem ser formadas?",
+    "alternativas": [
+      "9",
+      "12",
+      "18",
+      "24",
+      "36"
+    ],
     "gabarito": "D",
-    "resolucao": "Pelo princípio fundamental da contagem, multiplicamos as possibilidades de cada escolha: 4 × 3 × 2 = 24. Portanto, podem ser formados 24 looks diferentes. Alternativa D."
+    "resolucao": "Pelo princípio multiplicativo, multiplicamos as possibilidades de cada escolha. São 4 opções de camiseta, 3 de calça e 2 de crachá. Portanto: 4 · 3 · 2 = 24. Podem ser formadas 24 identificações diferentes."
   },
   {
     "n": 3,
-    "tipo": "Conexão",
-    "enunciado": "Dois amigos compraram juntos 5 canetas e 3 cadernos por R$ 28,00. Em outra loja, 2 canetas e 4 cadernos custaram R$ 28,00. O preço de uma caneta e de um caderno, respectivamente, é:",
-    "alternativas": ["R$ 2,00 e R$ 6,00", "R$ 4,00 e R$ 4,00", "R$ 3,00 e R$ 5,00", "R$ 5,00 e R$ 3,00", "R$ 6,00 e R$ 2,00"],
-    "gabarito": "A",
-    "resolucao": "Chamamos o preço da caneta de x e o do caderno de y. Montamos o sistema: 5x + 3y = 28 e 2x + 4y = 28. Simplificando a segunda equação: x + 2y = 14, logo x = 14 − 2y. Substituindo na primeira: 5(14 − 2y) + 3y = 28. Então 70 − 10y + 3y = 28; −7y = −42; y = 6. Assim, x = 14 − 12 = 2. A caneta custa R$ 2,00 e o caderno R$ 6,00. Alternativa A."
+    "tipo": "Conexões",
+    "enunciado": "Uma urna contém 5 bolas vermelhas e 3 bolas azuis, todas de mesmo tamanho. Duas bolas são retiradas sucessivamente, sem reposição. Qual é a probabilidade de as duas bolas retiradas serem vermelhas?",
+    "alternativas": [
+      "5/16",
+      "5/14",
+      "15/28",
+      "3/8",
+      "1/2"
+    ],
+    "gabarito": "B",
+    "resolucao": "Na primeira retirada, a probabilidade de sair uma bola vermelha é 5/8. Como não há reposição, restam 4 bolas vermelhas entre 7 bolas. A probabilidade de a segunda também ser vermelha é 4/7. Multiplicando: (5/8) · (4/7) = 20/56 = 5/14. Portanto, a probabilidade é 5/14."
   },
   {
     "n": 4,
-    "tipo": "Conexão",
-    "enunciado": "Ao medir a probabilidade de um evento, um aluno obteve o resultado 0,666... (dízima periódica). A fração geratriz correspondente a esse número é:",
-    "alternativas": ["2/3", "3/5", "5/8", "1/3", "1/6"],
-    "gabarito": "A",
-    "resolucao": "Seja x = 0,666... Multiplicando por 10: 10x = 6,666... Subtraindo a primeira equação da segunda: 10x − x = 6,666... − 0,666... Portanto, 9x = 6 e x = 6/9 = 2/3. Alternativa A."
+    "tipo": "Conexões",
+    "enunciado": "Uma empresa de transporte cobra uma taxa fixa de R$ 12,00 mais R$ 3,50 por quilômetro percorrido. Considerando x a quantidade de quilômetros e C(x) o custo total, qual expressão representa essa cobrança? Além disso, qual será o custo de uma viagem de 20 quilômetros?",
+    "alternativas": [
+      "C(x) = 12x + 3,50; custo de R$ 243,50",
+      "C(x) = 3,50x + 12; custo de R$ 82,00",
+      "C(x) = 3,50x − 12; custo de R$ 58,00",
+      "C(x) = 12x − 3,50; custo de R$ 236,50",
+      "C(x) = 15,50x; custo de R$ 310,00"
+    ],
+    "gabarito": "B",
+    "resolucao": "A cobrança possui uma parte fixa de R$ 12,00 e uma parte variável de R$ 3,50 por quilômetro. Portanto, C(x) = 3,50x + 12. Para 20 quilômetros: C(20) = 3,50 · 20 + 12 = 70 + 12 = 82. O custo será R$ 82,00. A expressão é uma função polinomial do primeiro grau, associada a uma progressão aritmética quando avaliamos distâncias com intervalos iguais."
   },
   {
     "n": 5,
-    "tipo": "Conexão",
-    "enunciado": "A área de um terreno retangular é 48 m². Sabe-se que o comprimento é 4 metros a mais que o dobro da largura. As dimensões desse terreno (largura e comprimento) são:",
-    "alternativas": ["4 m e 12 m", "3 m e 16 m", "6 m e 8 m", "5 m e 9,6 m", "2 m e 24 m"],
-    "gabarito": "A",
-    "resolucao": "Chamamos a largura de x. O comprimento será 2x + 4. Como a área é 48 m²: x(2x + 4) = 48. Testando x = 4: o comprimento será 2 × 4 + 4 = 12. A área é 4 × 12 = 48 m². Portanto, as dimensões são 4 m e 12 m. Alternativa A."
+    "tipo": "Conexões",
+    "enunciado": "Uma publicação em uma rede social alcançou 200 pessoas no primeiro dia. Nos dias seguintes, o alcance diário triplicou em relação ao dia anterior. Considerando essa regularidade, qual será o alcance no quinto dia?",
+    "alternativas": [
+      "1.800 pessoas",
+      "3.600 pessoas",
+      "5.400 pessoas",
+      "8.100 pessoas",
+      "16.200 pessoas"
+    ],
+    "gabarito": "E",
+    "resolucao": "O alcance forma uma progressão geométrica de primeiro termo a₁ = 200 e razão q = 3. O quinto termo é calculado por a₅ = a₁ · q⁴. Assim: a₅ = 200 · 3⁴ = 200 · 81 = 16.200. Portanto, no quinto dia, o alcance será de 16.200 pessoas. Essa sequência também pode ser representada por uma função exponencial."
   },
   {
     "n": 6,
-    "tipo": "Conexão",
-    "enunciado": "Para calcular o MMC e o MDC de dois números em um problema de engenharia, foi necessário decompor 84 em fatores primos. A decomposição correta é:",
-    "alternativas": ["2² · 3 · 7", "2³ · 3 · 7", "2² · 21", "4 · 3 · 7", "2 · 6 · 7"],
-    "gabarito": "A",
-    "resolucao": "Dividimos 84 sucessivamente por números primos: 84 ÷ 2 = 42; 42 ÷ 2 = 21; 21 ÷ 3 = 7; 7 ÷ 7 = 1. Assim, 84 = 2 × 2 × 3 × 7 = 2² · 3 · 7. Alternativa A."
+    "tipo": "Conexões",
+    "enunciado": "Um jardim possui formato de hexágono regular, com cada lado medindo 4 metros. Para calcular a área desse jardim, pode-se dividi-lo em 6 triângulos equiláteros congruentes. Qual é a área total do jardim? Utilize √3 ≈ 1,73.",
+    "alternativas": [
+      "20,76 m²",
+      "24,00 m²",
+      "36,00 m²",
+      "41,52 m²",
+      "48,00 m²"
+    ],
+    "gabarito": "D",
+    "resolucao": "A área de um triângulo equilátero é A = (l² · √3)/4. Como o hexágono pode ser dividido em 6 triângulos equiláteros de lado 4 m, a área total será 6 · (4² · √3)/4. Assim: A = 6 · (16 · √3)/4 = 24√3. Utilizando √3 ≈ 1,73: A ≈ 24 · 1,73 = 41,52 m²."
   },
   {
     "n": 7,
-    "tipo": "Conexão",
-    "enunciado": "Em uma pesquisa com 200 jovens sobre preferência de modalidade esportiva, 35% escolheram futebol. O número de jovens que preferiram futebol foi:",
-    "alternativas": ["35", "50", "70", "100", "135"],
+    "tipo": "Conexões",
+    "enunciado": "Uma praça circular possui raio de 12 metros. Uma área destinada a um jardim corresponde a um setor circular de 90° dessa praça. Considerando π = 3,14, qual é a área ocupada pelo jardim?",
+    "alternativas": [
+      "56,52 m²",
+      "75,36 m²",
+      "113,04 m²",
+      "150,72 m²",
+      "452,16 m²"
+    ],
     "gabarito": "C",
-    "resolucao": "Calculamos 35% de 200: 35/100 × 200 = 0,35 × 200 = 70. Portanto, 70 jovens escolheram futebol. Alternativa C."
+    "resolucao": "A área do setor circular é calculada por A = (ângulo/360°) · πr². Substituindo os valores: A = (90/360) · 3,14 · 12². Como 90/360 = 1/4 e 12² = 144, temos A = 1/4 · 3,14 · 144 = 452,16/4 = 113,04 m²."
   },
   {
     "n": 8,
-    "tipo": "Conexão",
-    "enunciado": "Uma pista circular de atletismo tem raio de 35 m. Considerando π = 22/7, o comprimento aproximado de uma volta completa nessa pista, em metros, é:",
-    "alternativas": ["110", "220", "440", "770", "1.100"],
-    "gabarito": "B",
-    "resolucao": "O comprimento da circunferência é C = 2πr. Substituindo: C = 2 × 22/7 × 35. Simplificando 35 ÷ 7 = 5: C = 2 × 22 × 5 = 220 m. Alternativa B."
+    "tipo": "Conexões",
+    "enunciado": "Uma empresa fabrica reservatórios em formato de prisma reto cuja base é um triângulo de área igual a 18 m². Sabendo que o comprimento do reservatório é de 5 metros, qual é o volume máximo que ele pode armazenar?",
+    "alternativas": [
+      "23 m³",
+      "45 m³",
+      "60 m³",
+      "75 m³",
+      "90 m³"
+    ],
+    "gabarito": "E",
+    "resolucao": "O volume de um prisma é calculado multiplicando a área da base pelo comprimento do prisma. Assim: V = Ab · h. Substituindo: V = 18 · 5 = 90 m³. Portanto, o volume máximo é 90 m³."
   },
   {
     "n": 9,
-    "tipo": "Conexão",
-    "enunciado": "Uma caixa de transporte tem formato de paralelepípedo com dimensões internas 40 cm × 30 cm × 25 cm. A capacidade dessa caixa, em litros, é: (lembre-se: 1 dm³ = 1 litro e 1 dm = 10 cm)",
-    "alternativas": ["15 litros", "30 litros", "45 litros", "60 litros", "75 litros"],
+    "tipo": "Conexões",
+    "enunciado": "Uma embalagem de presente possui o formato de um cubo. Antes de ser montada, ela é representada por uma planificação formada por seis quadrados congruentes. Qual das alternativas apresenta uma característica necessária para que essa planificação possa formar corretamente um cubo?",
+    "alternativas": [
+      "Os seis quadrados devem estar organizados em uma única linha reta.",
+      "A planificação deve permitir que os seis quadrados se encontrem formando seis faces, sem sobreposição.",
+      "A planificação deve apresentar apenas quatro quadrados e dois triângulos.",
+      "Os quadrados devem possuir medidas diferentes entre si.",
+      "A planificação deve formar obrigatoriamente um retângulo de seis quadrados."
+    ],
     "gabarito": "B",
-    "resolucao": "Calculamos o volume: V = 40 × 30 × 25 = 30.000 cm³. Como 1 litro corresponde a 1.000 cm³, dividimos 30.000 por 1.000. Obtemos 30 litros. Alternativa B."
+    "resolucao": "Um cubo possui seis faces quadradas congruentes. Uma planificação válida deve apresentar essas seis faces organizadas de maneira que, ao dobrar pelas arestas, elas formem o sólido sem sobreposição. Existem diferentes planificações possíveis para um cubo, mas uma sequência de seis quadrados em linha reta não forma corretamente suas faces."
   },
   {
     "n": 10,
-    "tipo": "Conexão",
-    "enunciado": "As idades dos participantes de um clube de leitura são: 14, 15, 14, 16, 15, 14 e 17 anos. A moda e a mediana dessas idades, respectivamente, são:",
-    "alternativas": ["14 e 14", "14 e 15", "15 e 14", "15 e 15", "14 e 16"],
-    "gabarito": "B",
-    "resolucao": "A moda é o valor que mais aparece. O número 14 aparece três vezes, sendo a moda. Organizamos as idades: 14, 14, 14, 15, 15, 16, 17. Como temos sete valores, a mediana é o quarto valor, que é 15. Portanto, moda 14 e mediana 15. Alternativa B."
+    "tipo": "Conexões",
+    "enunciado": "Uma pesquisa sobre o tempo diário de estudo de um grupo de estudantes apresentou os seguintes resultados, em horas: 1, 2, 2, 3, 4, 4, 4, 5. Com base nesses dados, qual alternativa apresenta corretamente a média, a mediana e a moda, respectivamente?",
+    "alternativas": [
+      "2,5; 3; 4",
+      "3; 3,5; 4",
+      "3,125; 3,5; 4",
+      "3,5; 3,5; 2",
+      "4; 3; 5"
+    ],
+    "gabarito": "C",
+    "resolucao": "A média é obtida pela soma dos valores dividida pela quantidade de dados: (1 + 2 + 2 + 3 + 4 + 4 + 4 + 5)/8 = 25/8 = 3,125. Como existem 8 valores, a mediana é a média entre o 4º e o 5º valores: (3 + 4)/2 = 3,5. A moda é o valor que mais aparece, portanto é 4. Assim, a resposta correta é média 3,125; mediana 3,5; moda 4."
   },
   {
     "n": 11,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Ao simplificar a expressão √(50) · √(32) ÷ √(2) para encontrar a medida de um lado de um triângulo, um aluno obteve o valor:",
-    "alternativas": ["20√2", "40", "20√5", "10√2", "80"],
-    "gabarito": "A",
-    "resolucao": "Podemos reunir os radicais: √50 × √32 ÷ √2 = √(50 × 32 ÷ 2) = √800. Como 800 = 400 × 2, temos √800 = √400 × √2 = 20√2. Alternativa A."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma empresa utiliza uma matriz para organizar informações de produção. Considere a matriz A = [[2, 1, 0], [1, 3, 2], [0, 2, 1]]. Qual é o determinante dessa matriz?",
+    "alternativas": [
+      "-5",
+      "-3",
+      "0",
+      "3",
+      "5"
+    ],
+    "gabarito": "B",
+    "resolucao": "Calculando o determinante pela expansão da primeira linha: det(A) = 2 · (3 · 1 − 2 · 2) − 1 · (1 · 1 − 2 · 0) + 0. Assim: det(A) = 2 · (3 − 4) − 1 · 1 = −2 − 1 = −3."
   },
   {
     "n": 12,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Uma loja de eletrônicos anunciou um smartphone por R$ 1.800,00. Na primeira semana de promoção, ofereceu 20% de desconto. Na semana seguinte, aplicou mais 15% de desconto sobre o preço já reduzido. O valor final pago pelo cliente foi:",
-    "alternativas": ["R$ 1.224,00", "R$ 1.260,00", "R$ 1.350,00", "R$ 1.440,00", "R$ 1.530,00"],
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma matriz M de ordem 2 × 3 é definida pela lei de formação aᵢⱼ = 2i − j, em que i representa a linha e j representa a coluna. Qual é a matriz M?",
+    "alternativas": [
+      "[[1, 0, -1], [3, 2, 1]]",
+      "[[2, 1, 0], [4, 3, 2]]",
+      "[[1, 2, 3], [3, 4, 5]]",
+      "[[0, 1, 2], [2, 3, 4]]",
+      "[[1, 0, 1], [3, 2, 3]]"
+    ],
     "gabarito": "A",
-    "resolucao": "Primeiro calculamos o desconto de 20%: 1.800 × 0,20 = 360. O preço passa a ser R$ 1.440,00. Depois aplicamos 15% sobre esse novo preço: 1.440 × 0,15 = 216. Subtraindo: 1.440 − 216 = R$ 1.224,00. Alternativa A."
+    "resolucao": "A matriz possui 2 linhas e 3 colunas. Aplicando a lei aᵢⱼ = 2i − j: na primeira linha (i = 1), os elementos são 2 · 1 − 1 = 1, 2 · 1 − 2 = 0 e 2 · 1 − 3 = −1. Na segunda linha (i = 2), temos 2 · 2 − 1 = 3, 2 · 2 − 2 = 2 e 2 · 2 − 3 = 1. Portanto, M = [[1, 0, −1], [3, 2, 1]]."
   },
   {
     "n": 13,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Em uma circunferência, o arco AB mede 96°. Um ângulo inscrito que “enxerga” esse mesmo arco AB tem medida igual a:",
-    "alternativas": ["48°", "96°", "192°", "32°", "64°"],
-    "gabarito": "A",
-    "resolucao": "A medida de um ângulo inscrito é igual à metade da medida do arco correspondente. Assim: 96° ÷ 2 = 48°. Alternativa A."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Em um sistema de controle de estoque, duas matrizes representam informações sobre produtos. Considere A = [[1, 2], [3, 0]] e B = [[2, 1], [1, 4]]. Qual é o resultado do produto matricial A · B?",
+    "alternativas": [
+      "[[2, 9], [6, 4]]",
+      "[[3, 8], [6, 3]]",
+      "[[4, 9], [6, 3]]",
+      "[[4, 8], [5, 3]]",
+      "[[5, 9], [6, 4]]"
+    ],
+    "gabarito": "C",
+    "resolucao": "Para multiplicar as matrizes, multiplicamos cada linha de A por cada coluna de B. Primeiro elemento: 1 · 2 + 2 · 1 = 4. Segundo elemento: 1 · 1 + 2 · 4 = 9. Terceiro elemento: 3 · 2 + 0 · 1 = 6. Quarto elemento: 3 · 1 + 0 · 4 = 3. Portanto, A · B = [[4, 9], [6, 3]]."
   },
   {
     "n": 14,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Um tanque cilíndrico de armazenamento de água tem raio da base 1,5 m e altura 4 m. Considerando π = 3,14, a capacidade aproximada desse tanque, em m³, é:",
-    "alternativas": ["18,84", "28,26", "37,68", "56,52", "75,36"],
-    "gabarito": "B",
-    "resolucao": "O volume do cilindro é V = πr²h. Substituindo: V = 3,14 × 1,5² × 4. Como 1,5² = 2,25, temos V = 3,14 × 2,25 × 4 = 3,14 × 9 = 28,26 m³. Alternativa B."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Um sistema linear é representado pelas equações x + y = 3 e 2x + 2y = 8. Considerando a classificação dos sistemas lineares, como esse sistema pode ser classificado?",
+    "alternativas": [
+      "Sistema possível e determinado, pois possui uma única solução.",
+      "Sistema possível e indeterminado, pois possui infinitas soluções.",
+      "Sistema impossível, pois não possui solução.",
+      "Sistema possível e determinado, pois x = 2 e y = 1.",
+      "Sistema possível e indeterminado, pois as equações são equivalentes."
+    ],
+    "gabarito": "C",
+    "resolucao": "Multiplicando a primeira equação por 2, obtemos 2x + 2y = 6. Porém, a segunda equação afirma que 2x + 2y = 8. Como a mesma expressão não pode ser igual a 6 e a 8 simultaneamente, não existe solução para o sistema. Portanto, ele é impossível."
   },
   {
     "n": 15,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Duas retas paralelas são cortadas por uma transversal. Um dos ângulos formados mede 125°. A medida do ângulo correspondente a esse ângulo é:",
-    "alternativas": ["55°", "90°", "125°", "180°", "235°"],
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Em um projeto de engenharia, um ângulo de 225° precisa ser convertido para radianos para ser utilizado em um cálculo trigonométrico. Qual é a medida correspondente?",
+    "alternativas": [
+      "π/4",
+      "3π/4",
+      "5π/4",
+      "3π/2",
+      "7π/4"
+    ],
     "gabarito": "C",
-    "resolucao": "Quando duas retas paralelas são cortadas por uma transversal, os ângulos correspondentes possuem a mesma medida. Portanto, o ângulo correspondente mede 125°. Alternativa C."
+    "resolucao": "Para converter graus em radianos, multiplicamos o valor do ângulo por π/180°. Assim: 225° · π/180° = 225π/180. Simplificando a fração por 45, obtemos 5π/4 radianos."
   },
   {
     "n": 16,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Ao fatorar a expressão 81x² − 49 para resolver uma equação, um estudante encontrou corretamente:",
-    "alternativas": ["(9x − 7)²", "(9x + 7)²", "(9x − 7)(9x + 7)", "(81x − 49)(x + 1)", "(9x − 7)(9x − 7)"],
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Em um triângulo retângulo, um dos ângulos agudos é representado por θ. Sabendo que sen(θ) = 5/13 e que θ está no primeiro quadrante, determine o valor de cos(θ).",
+    "alternativas": [
+      "5/12",
+      "5/13",
+      "12/13",
+      "13/12",
+      "13/5"
+    ],
     "gabarito": "C",
-    "resolucao": "Reconhecemos uma diferença de dois quadrados: 81x² − 49 = (9x)² − 7². Aplicamos a identidade a² − b² = (a − b)(a + b). Portanto, a fatoração é (9x − 7)(9x + 7). Alternativa C."
+    "resolucao": "Utilizamos a relação fundamental da trigonometria: sen²(θ) + cos²(θ) = 1. Substituindo sen(θ) = 5/13: (5/13)² + cos²(θ) = 1. Assim, 25/169 + cos²(θ) = 1, então cos²(θ) = 144/169. Como θ está no primeiro quadrante, o cosseno é positivo. Portanto, cos(θ) = 12/13."
   },
   {
     "n": 17,
-    "tipo": "Habilidade Atual",
-    "enunciado": "A expressão algébrica que representa a área de um quadrado de lado (x + 5) é x² + 10x + 25. Essa expressão pode ser reescrita de forma fatorada como:",
-    "alternativas": ["(x + 5)²", "(x − 5)²", "(x + 10)(x + 2,5)", "(x + 5)(x − 5)", "(x + 25)(x + 1)"],
-    "gabarito": "A",
-    "resolucao": "A expressão x² + 10x + 25 é um trinômio quadrado perfeito. O primeiro termo é x², o último é 5² e o termo do meio é 2 × x × 5 = 10x. Logo, a fatoração é (x + 5)². Alternativa A."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Durante o estudo de funções trigonométricas, um estudante precisa determinar o valor exato de cos(150°). Utilizando os ângulos notáveis e suas relações de simetria, qual é o resultado correto?",
+    "alternativas": [
+      "√3/2",
+      "1/2",
+      "−1/2",
+      "−√3/2",
+      "−√2/2"
+    ],
+    "gabarito": "D",
+    "resolucao": "O ângulo de 150° está no segundo quadrante, onde o cosseno é negativo. Além disso, 150° = 180° − 30°. Pela relação de simetria, cos(150°) = −cos(30°). Como cos(30°) = √3/2, temos cos(150°) = −√3/2."
   },
   {
     "n": 18,
-    "tipo": "Habilidade Atual",
-    "enunciado": "A função que modela a altura de um objeto em queda livre a partir de certa altura é do tipo f(t) = √(h − 5t), em que t é o tempo. O domínio dessa função, considerando apenas valores reais possíveis, é:",
-    "alternativas": ["{t ∈ ℝ | t ≥ 0}", "{t ∈ ℝ | 0 ≤ t ≤ h/5}", "{t ∈ ℝ | t ≥ h/5}", "{t ∈ ℝ | t ≠ h/5}", "{t ∈ ℝ | t > 0}"],
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma máquina realiza uma tarefa em determinado tempo, e a quantidade de máquinas trabalhando simultaneamente influencia o tempo necessário para concluir o serviço. Observe os dados de uma atividade: 1 máquina realiza o serviço em 12 horas; 2 máquinas, em 6 horas; 3 máquinas, em 4 horas; e 4 máquinas, em 3 horas. Considerando máquinas com o mesmo desempenho, qual relação matemática representa essa situação?",
+    "alternativas": [
+      "As grandezas são diretamente proporcionais, pois o tempo aumenta junto com a quantidade de máquinas.",
+      "As grandezas são inversamente proporcionais, pois o produto entre a quantidade de máquinas e o tempo permanece constante.",
+      "As grandezas são diretamente proporcionais, pois o produto entre elas é sempre igual a 12.",
+      "As grandezas não apresentam proporcionalidade, pois os valores são diferentes.",
+      "As grandezas são inversamente proporcionais, pois a soma entre a quantidade de máquinas e o tempo é constante."
+    ],
     "gabarito": "B",
-    "resolucao": "Para que a raiz quadrada tenha resultado real, o radicando deve ser maior ou igual a zero: h − 5t ≥ 0. Isolando t: −5t ≥ −h. Ao dividir por −5, invertemos o sinal da desigualdade: t ≤ h/5. Como o tempo também deve ser não negativo, temos 0 ≤ t ≤ h/5. Alternativa B."
+    "resolucao": "Verificando os produtos entre a quantidade de máquinas e o tempo: 1 · 12 = 12; 2 · 6 = 12; 3 · 4 = 12; 4 · 3 = 12. Como o produto permanece constante, as grandezas são inversamente proporcionais. Portanto, quanto maior a quantidade de máquinas, menor será o tempo necessário para realizar o serviço."
   },
   {
     "n": 19,
-    "tipo": "Habilidade Atual",
-    "enunciado": "O valor pago por uma corrida de táxi é composto por uma bandeirada de R$ 6,00 mais R$ 2,80 por quilômetro rodado. A função que melhor representa o valor total V em função da distância d (em km) é:",
-    "alternativas": ["V = 2,80d", "V = 6d + 2,80", "V = 2,80d + 6", "V = 6d − 2,80", "V = 8,80d"],
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma empresa acompanha o lucro mensal de um produto por meio da função L(x) = -2x² + 80x - 500, em que x representa a quantidade produzida em centenas de unidades e L(x) representa o lucro em reais. Qual quantidade de produção proporciona o lucro máximo?",
+    "alternativas": [
+      "10 centenas de unidades",
+      "15 centenas de unidades",
+      "20 centenas de unidades",
+      "25 centenas de unidades",
+      "40 centenas de unidades"
+    ],
     "gabarito": "C",
-    "resolucao": "O valor variável depende da distância: R$ 2,80 por quilômetro, representado por 2,80d. A bandeirada é um valor fixo de R$ 6,00. Somamos as duas parcelas: V = 2,80d + 6. Alternativa C."
+    "resolucao": "A função é quadrática e possui a = -2 e b = 80. Como a < 0, a parábola apresenta ponto de máximo. A abscissa do vértice é x = -b/(2a). Assim, x = -80/[2 · (-2)] = 20. Portanto, o lucro máximo ocorre quando a empresa produz 20 centenas, ou seja, 2.000 unidades."
   },
   {
     "n": 20,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Uma escada de 17 m de comprimento está apoiada em uma parede vertical. A base da escada dista 8 m da parede. A altura em que a escada toca a parede é:",
-    "alternativas": ["9 m", "12 m", "15 m", "16 m", "25 m"],
-    "gabarito": "C",
-    "resolucao": "A escada, a parede e o chão formam um triângulo retângulo. Aplicamos Pitágoras: 17² = 8² + h². Assim, 289 = 64 + h²; h² = 225; h = √225 = 15. A altura é 15 m. Alternativa C."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma bola é lançada verticalmente e sua altura, em metros, após t segundos, é representada pela função h(t) = -5t² + 20t + 1. Qual é a altura máxima atingida pela bola?",
+    "alternativas": [
+      "16 m",
+      "18 m",
+      "20 m",
+      "21 m",
+      "25 m"
+    ],
+    "gabarito": "D",
+    "resolucao": "A altura máxima corresponde ao valor de y do vértice da parábola. Primeiro, calculamos o instante: tᵥ = -b/(2a) = -20/[2 · (-5)] = 2 segundos. Depois, substituímos na função: h(2) = -5 · 2² + 20 · 2 + 1 = -20 + 40 + 1 = 21. Portanto, a altura máxima é 21 metros."
   },
   {
     "n": 21,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Em uma urna há 7 bolas numeradas de 1 a 7. Retirando-se uma bola ao acaso, a probabilidade de o número ser ímpar é:",
-    "alternativas": ["2/7", "3/7", "4/7", "5/7", "1/2"],
-    "gabarito": "C",
-    "resolucao": "Os números ímpares entre 1 e 7 são 1, 3, 5 e 7. Portanto, temos 4 casos favoráveis em um total de 7 possibilidades. A probabilidade é 4/7. Alternativa C."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Um terreno retangular possui comprimento de 18 metros e largura de 12 metros. Seu proprietário deseja construir uma calçada de largura uniforme de 1 metro ao redor da parte interna do terreno, deixando a região central livre. Qual será a área da região central livre?",
+    "alternativas": [
+      "120 m²",
+      "140 m²",
+      "150 m²",
+      "160 m²",
+      "180 m²"
+    ],
+    "gabarito": "D",
+    "resolucao": "A calçada ocupa 1 metro em cada lado do terreno. Portanto, as dimensões da região central serão 18 − 2 = 16 metros de comprimento e 12 − 2 = 10 metros de largura. A área livre será 16 · 10 = 160 m². Portanto, a alternativa correta é D."
   },
   {
     "n": 22,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Duas retas paralelas são cortadas por três transversais, formando segmentos proporcionais. Se os segmentos em uma das transversais medem 6 cm e 9 cm, e o segmento correspondente na outra transversal mede 12 cm, o segmento desconhecido mede:",
-    "alternativas": ["8 cm", "15 cm", "18 cm", "20 cm", "24 cm"],
-    "gabarito": "C",
-    "resolucao": "Pelo Teorema de Tales, os segmentos correspondentes são proporcionais. Montamos 6/9 = 12/x. Multiplicando em cruz: 6x = 108. Dividindo por 6: x = 18 cm. Alternativa C."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Um reservatório é formado pela união de um cilindro de raio 2 metros e altura 5 metros com um hemisfério de mesmo raio, colocado em uma de suas extremidades. Considerando π = 3, o volume total do reservatório é:",
+    "alternativas": [
+      "60 m³",
+      "64 m³",
+      "68 m³",
+      "72 m³",
+      "76 m³"
+    ],
+    "gabarito": "E",
+    "resolucao": "O volume total é a soma do volume do cilindro com o volume do hemisfério. Para o cilindro: V = πr²h = 3 · 2² · 5 = 60 m³. Para o hemisfério: V = (2/3)πr³ = (2/3) · 3 · 2³ = 16 m³. Somando: 60 + 16 = 76 m³. Portanto, a alternativa correta é E."
   },
   {
     "n": 23,
-    "tipo": "Habilidade Atual",
-    "enunciado": "A tabela mostra a quantidade de peças produzidas (x) e o custo total em reais (y) de uma pequena fábrica. Qual função representa a relação entre a quantidade produzida e o custo total?",
-    "alternativas": ["y = 10x + 30", "y = 15x", "y = 10x", "y = 20x − 20", "y = 5x + 55"],
-    "tabela": [["x (peças)", "5", "10", "15", "20"], ["y (R$)", "80", "130", "180", "230"]],
-    "gabarito": "A",
-    "resolucao": "Observamos que, quando a produção aumenta de 5 peças, o custo aumenta R$ 50,00. Logo, cada peça acrescenta R$ 10,00 ao custo. A função tem a forma y = 10x + b. Usando o ponto (5, 80): 80 = 10 × 5 + b. Então 80 = 50 + b e b = 30. Portanto, y = 10x + 30. Alternativa A."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "A temperatura de um ambiente ao longo do dia pode ser aproximada pela função T(t) = 24 + 5 sen(πt/12), em que t representa o tempo em horas e T a temperatura em graus Celsius. Qual é o período dessa função, isto é, o tempo necessário para completar um ciclo?",
+    "alternativas": [
+      "6 horas",
+      "12 horas",
+      "18 horas",
+      "24 horas",
+      "36 horas"
+    ],
+    "gabarito": "D",
+    "resolucao": "Para uma função do tipo sen(bt), o período é dado por P = 2π/|b|. Nesta função, b = π/12. Assim, P = 2π/(π/12) = 2π · 12/π = 24 horas. Portanto, o período é de 24 horas."
   },
   {
     "n": 24,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Simplificando a expressão (x + 6)² − x², um aluno obteve corretamente:",
-    "alternativas": ["12x + 36", "12x", "36", "12x − 36", "24x"],
-    "gabarito": "A",
-    "resolucao": "Desenvolvemos o quadrado da soma: (x + 6)² = x² + 12x + 36. Subtraindo x²: x² + 12x + 36 − x². Os termos x² se anulam, restando 12x + 36. Alternativa A."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Um engenheiro utiliza a relação entre o ângulo central e o comprimento de um arco para projetar uma pista circular. Em uma circunferência de raio 10 metros, um arco corresponde a um ângulo central de 90°. Considerando π = 3,14, qual é o comprimento desse arco?",
+    "alternativas": [
+      "7,85 m",
+      "10,00 m",
+      "15,70 m",
+      "31,40 m",
+      "62,80 m"
+    ],
+    "gabarito": "C",
+    "resolucao": "O comprimento do arco é calculado por L = (θ/360°) · 2πr. Substituindo: L = (90/360) · 2 · 3,14 · 10. Como 90/360 = 1/4, temos L = 62,8/4 = 15,7 metros."
   },
   {
     "n": 25,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Em um triângulo retângulo, a hipotenusa mede 25 cm e um dos catetos mede 15 cm. A medida do outro cateto é:",
-    "alternativas": ["10 cm", "15 cm", "20 cm", "25 cm", "30 cm"],
-    "gabarito": "C",
-    "resolucao": "Pelo Teorema de Pitágoras: 25² = 15² + x². Assim, 625 = 225 + x². Logo, x² = 400 e x = √400 = 20 cm. Alternativa C."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma fábrica produz caixas em formato de prisma triangular. A base do prisma é um triângulo retângulo cujos catetos medem 6 cm e 8 cm. Sabendo que o comprimento do prisma é 15 cm, qual é seu volume?",
+    "alternativas": [
+      "180 cm³",
+      "240 cm³",
+      "300 cm³",
+      "360 cm³",
+      "480 cm³"
+    ],
+    "gabarito": "D",
+    "resolucao": "A área da base triangular é Ab = (b · h)/2 = (6 · 8)/2 = 24 cm². O volume do prisma é V = Ab · comprimento. Assim, V = 24 · 15 = 360 cm³."
   },
   {
     "n": 26,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Carlos investiu R$ 5.000,00 em um fundo que rende 3% ao mês com juros compostos. Após 2 meses, o montante será de:",
-    "alternativas": ["R$ 5.300,00", "R$ 5.304,50", "R$ 5.400,00", "R$ 5.450,00", "R$ 5.500,00"],
-    "gabarito": "B",
-    "resolucao": "Usamos M = C(1+i)^t. Substituindo: M = 5000(1+0,03)² = 5000 × 1,03² = 5000 × 1,0609 = R$ 5.304,50. Alternativa B."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma cidade registrou o crescimento de sua população em quatro anos consecutivos: 2022: 80.000 habitantes; 2023: 84.000 habitantes; 2024: 90.000 habitantes; 2025: 99.000 habitantes. Entre quais anos ocorreu a maior taxa percentual de crescimento anual?",
+    "alternativas": [
+      "Entre 2022 e 2023",
+      "Entre 2023 e 2024",
+      "Entre 2024 e 2025",
+      "As taxas foram iguais nos três períodos",
+      "Não houve crescimento percentual"
+    ],
+    "gabarito": "C",
+    "resolucao": "Calculamos a taxa percentual em cada intervalo. De 2022 para 2023: (4.000/80.000) · 100 = 5%. De 2023 para 2024: (6.000/84.000) · 100 ≈ 7,14%. De 2024 para 2025: (9.000/90.000) · 100 = 10%. Portanto, a maior taxa de crescimento ocorreu entre 2024 e 2025."
   },
   {
     "n": 27,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Ao simplificar a expressão (4x² − 5x + 7) − (2x² + 3x − 4), o resultado obtido é:",
-    "alternativas": ["2x² − 8x + 11", "2x² − 2x + 11", "6x² − 8x + 3", "2x² − 8x + 3", "2x² + 2x + 11"],
-    "gabarito": "A",
-    "resolucao": "Distribuímos o sinal negativo aos termos do segundo parêntese: 4x² − 5x + 7 − 2x² − 3x + 4. Agrupamos os termos semelhantes: (4x² − 2x²) + (−5x − 3x) + (7 + 4). O resultado é 2x² − 8x + 11. Alternativa A."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma indústria produz três tipos de peças, representados por x, y e z. As quantidades produzidas obedecem ao sistema: x + y + z = 12; 2x + y − z = 5; x − y + 2z = 9. Qual é a solução desse sistema linear?",
+    "alternativas": [
+      "x = 2, y = 5, z = 5",
+      "x = 3, y = 4, z = 5",
+      "x = 4, y = 3, z = 5",
+      "x = 5, y = 2, z = 5",
+      "x = 3, y = 5, z = 4"
+    ],
+    "gabarito": "B",
+    "resolucao": "Da primeira equação, x = 12 − y − z. Substituindo na segunda: 2(12 − y − z) + y − z = 5, logo y + 3z = 19. Substituindo na terceira: 12 − y − z − y + 2z = 9, logo 2y − z = 3. Da segunda relação, y = 19 − 3z. Substituindo na terceira: 2(19 − 3z) − z = 3. Assim, 38 − 7z = 3, então z = 5. Consequentemente, y = 19 − 15 = 4 e x = 12 − 4 − 5 = 3. Portanto, x = 3, y = 4 e z = 5."
   },
   {
     "n": 28,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Três irmãos vão dividir R$ 1.200,00 na razão 2 : 3 : 5. O valor que caberá ao irmão que recebe a maior parte é:",
-    "alternativas": ["R$ 240,00", "R$ 360,00", "R$ 480,00", "R$ 600,00", "R$ 720,00"],
-    "gabarito": "D",
-    "resolucao": "Somamos as partes da razão: 2 + 3 + 5 = 10. Cada parte corresponde a 1200 ÷ 10 = R$ 120,00. O irmão que recebe a maior parte fica com 5 partes: 5 × 120 = R$ 600,00. Alternativa D."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "O gráfico de uma função trigonométrica é representado por f(x) = 2 cos(x). Considerando o intervalo de 0 a 2π, qual é o valor mínimo assumido pela função?",
+    "alternativas": [
+      "-2",
+      "-1",
+      "0",
+      "1",
+      "2"
+    ],
+    "gabarito": "A",
+    "resolucao": "O cosseno de qualquer ângulo varia entre −1 e 1. Como a função é f(x) = 2 cos(x), seus valores são multiplicados por 2. Assim, o valor mínimo é 2 · (−1) = −2, enquanto o máximo é 2."
   },
   {
     "n": 29,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Dois triângulos semelhantes têm lados correspondentes na razão 3 : 5. Se o perímetro do triângulo menor é 36 cm, o perímetro do triângulo maior é:",
-    "alternativas": ["48 cm", "54 cm", "60 cm", "72 cm", "90 cm"],
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma empresa deseja construir uma placa circular de raio 5 metros. No centro dessa placa será retirada uma região circular menor, de raio 3 metros, formando uma coroa circular. Considerando π = 3,14, qual será a área da placa após a retirada da região central?",
+    "alternativas": [
+      "25,12 m²",
+      "37,68 m²",
+      "50,24 m²",
+      "78,50 m²",
+      "100,48 m²"
+    ],
     "gabarito": "C",
-    "resolucao": "Como os triângulos são semelhantes, seus perímetros seguem a mesma razão dos lados correspondentes. Temos 3/5 = 36/x. Multiplicando em cruz: 3x = 180. Portanto, x = 60 cm. Alternativa C."
+    "resolucao": "A área da coroa circular é a diferença entre a área do círculo maior e a do menor: A = π(R² − r²). Substituindo: A = 3,14 · (5² − 3²) = 3,14 · (25 − 9) = 3,14 · 16 = 50,24 m²."
   },
   {
     "n": 30,
-    "tipo": "Habilidade Atual",
-    "enunciado": "Uma piscina tem capacidade de 45 m³. Quantos litros de água são necessários para enchê-la completamente?",
-    "alternativas": ["45 litros", "450 litros", "4.500 litros", "45.000 litros", "450.000 litros"],
-    "gabarito": "D",
-    "resolucao": "Sabemos que 1 m³ equivale a 1.000 litros. Portanto, 45 m³ = 45 × 1.000 = 45.000 litros. Alternativa D."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma fábrica utiliza embalagens cilíndricas fechadas, com raio da base de 4 cm e altura de 10 cm. Considerando π = 3,14, qual é a área total de material necessária para fabricar uma embalagem, incluindo as duas bases?",
+    "alternativas": [
+      "251,20 cm²",
+      "301,44 cm²",
+      "351,68 cm²",
+      "401,92 cm²",
+      "502,40 cm²"
+    ],
+    "gabarito": "C",
+    "resolucao": "A área total do cilindro é At = 2πr² + 2πrh. Substituindo r = 4 e h = 10: At = 2 · 3,14 · 16 + 2 · 3,14 · 4 · 10. Assim: At = 100,48 + 251,20 = 351,68 cm²."
   },
   {
     "n": 31,
-    "tipo": "Habilidade Atual",
-    "enunciado": "A distância média entre a Terra e o Sol é de aproximadamente 1,5 × 10¹¹ metros. Em notação decimal, esse valor corresponde a:",
-    "alternativas": ["15.000.000.000 m", "150.000.000.000 m", "1.500.000.000 m", "15.000.000 m", "1.500.000.000.000 m"],
-    "gabarito": "B",
-    "resolucao": "O expoente 11 indica que devemos deslocar a vírgula 11 casas para a direita. Assim, 1,5 × 10¹¹ = 150.000.000.000 metros. Alternativa B."
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma pesquisa comparou a renda mensal e a quantidade de moradores de três municípios. Município A: renda total de R$ 2.400.000,00 e 1.200 habitantes. Município B: renda total de R$ 3.000.000,00 e 2.000 habitantes. Município C: renda total de R$ 1.800.000,00 e 600 habitantes. Qual município apresenta a maior renda per capita?",
+    "alternativas": [
+      "Município A, com R$ 2.000,00 por habitante.",
+      "Município B, com R$ 1.500,00 por habitante.",
+      "Município C, com R$ 3.000,00 por habitante.",
+      "Municípios A e B, com a mesma renda per capita.",
+      "Os três municípios apresentam a mesma renda per capita."
+    ],
+    "gabarito": "C",
+    "resolucao": "A renda per capita é calculada dividindo a renda total pela quantidade de habitantes. Município A: 2.400.000 ÷ 1.200 = R$ 2.000,00. Município B: 3.000.000 ÷ 2.000 = R$ 1.500,00. Município C: 1.800.000 ÷ 600 = R$ 3.000,00. Portanto, o município C apresenta a maior renda per capita."
   },
   {
     "n": 32,
-    "tipo": "Habilidade Atual",
-    "enunciado": "A tabela mostra a quantidade de livros emprestados pela biblioteca escolar em quatro semanas. Qual foi a média de livros emprestados por semana?",
-    "alternativas": ["54", "56", "59", "62", "64"],
-    "tabela": [["Semana", "1ª", "2ª", "3ª", "4ª"], ["Livros", "48", "62", "55", "71"]],
+    "tipo": "Habilidades Atuais",
+    "enunciado": "Uma empresa utiliza uma função quadrática para representar o custo de produção de determinado produto: C(x) = x² − 12x + 50, em que x representa a quantidade produzida em centenas de unidades. Qual quantidade de produção proporciona o menor custo?",
+    "alternativas": [
+      "4 centenas de unidades",
+      "5 centenas de unidades",
+      "6 centenas de unidades",
+      "8 centenas de unidades",
+      "12 centenas de unidades"
+    ],
     "gabarito": "C",
-    "resolucao": "Para calcular a média, somamos as quantidades e dividimos pelo número de semanas: (48 + 62 + 55 + 71) ÷ 4 = 236 ÷ 4 = 59. Portanto, a média foi de 59 livros por semana. Alternativa C."
+    "resolucao": "Como o coeficiente a = 1 é positivo, a parábola apresenta um ponto de mínimo. A abscissa do vértice é x = −b/(2a). Substituindo: x = −(−12)/(2 · 1) = 12/2 = 6. Portanto, o menor custo ocorre quando são produzidas 6 centenas, ou seja, 600 unidades."
   }
 ]
