@@ -239,13 +239,19 @@ async function submit(expired) {
     Math.max(0, TOTAL_TIME - Math.ceil((endAt - Date.now()) / 1000))
   );
 
+  const acertos = questions.reduce((total, q, i) => {
+  return total + (answers[i] === q.gabarito ? 1 : 0);
+}, 0);
+
   const payload = {
-    ...student,
-    respostas: answers,
-    tempoSegundos,
-    finalizadoPorTempo: expired,
-    simulado: 'Matemática 3º Ano EM - 32 questões'
-  };
+  ...student,
+  respostas: answers,
+  acertos: acertos,
+  total: 32,
+  tempoSegundos: tempoSegundos,
+  finalizadoPorTempo: expired,
+  simulado: 'Matemática 3º Ano EM - 32 questões'
+};
 
   try {
     const response = await fetch(window.SIMULADO_ENDPOINT, {
