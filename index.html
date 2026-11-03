@@ -141,7 +141,19 @@
     <p>32 questões • Avaliação e preparação para o ENEM</p>
   </header>
 
-  <main>
+<main>
+    <section class="painel">
+      <h2>Identificação do aluno</h2>
+
+      <label for="nomeAluno">Nome completo:</label>
+      <input type="text" id="nomeAluno" placeholder="Digite seu nome completo"
+        required style="width:100%; padding:12px; margin:8px 0 15px; border:1px solid #cbd5e1; border-radius:8px;">
+
+      <label for="turmaAluno">Turma:</label>
+      <input type="text" id="turmaAluno" placeholder="Ex.: 3º EM A"
+        required style="width:100%; padding:12px; margin:8px 0; border:1px solid #cbd5e1; border-radius:8px;">
+    </section>
+
     <section class="painel">
       <strong>Seu progresso</strong>
       <p id="contador">Carregando questões...</p>
@@ -240,10 +252,36 @@
       document.getElementById("barra").style.width =
         `${(respondidas / total) * 100}%`;
     }
+async function enviarResultado(dados) {
+  const url = "https://script.google.com/macros/s/AKfycby-Srsg6ewu6-NwzuZVSL02c4HeykUSGnYdqjyNIJOkLEEUxEsZC17kC4gBGvKrdAad/exec";
 
+  try {
+    await fetch(url, {
+      method: "POST",
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify(dados)
+    });
+
+    document.getElementById("statusEnvio").textContent =
+      "Envio solicitado. Confira com seu professor se o resultado foi registrado.";
+
+  } catch (erro) {
+    document.getElementById("statusEnvio").textContent =
+      "Não foi possível enviar os dados. Avise seu professor.";
+  }
+}
     function finalizarSimulado() {
       if (finalizado) return;
+const nome = document.getElementById("nomeAluno").value.trim();
+const turma = document.getElementById("turmaAluno").value.trim();
 
+if (!nome || !turma) {
+  alert("Preencha seu nome e sua turma antes de finalizar.");
+  return;
+}
       const emBranco = questoes.length - Object.keys(respostas).length;
       if (emBranco > 0) {
         const confirmar = confirm(
@@ -266,6 +304,7 @@
         <h2>Resultado do simulado</h2>
         <p><strong>${acertos} de ${questoes.length} questões corretas</strong></p>
         <p>Percentual de acertos: <strong>${percentual}%</strong></p>
+        <p id="statusEnvio">Enviando resultado para a planilha...</p>
         <hr>
         <h3>Correção comentada</h3>
         <p>Confira sua resposta, o gabarito e a resolução de cada questão.</p>
@@ -293,8 +332,17 @@
 
       resultado.innerHTML = html;
       resultado.classList.remove("oculto");
-      document.getElementById("finalizar").classList.add("oculto");
-      resultado.scrollIntoView({ behavior: "smooth" });
+document.getElementById("finalizar").classList.add("oculto");
+
+enviarResultado({
+  nome: nome,
+  turma: turma,
+  acertos: acertos,
+  total: questoes.length,
+  respostas: respostas
+});
+
+resultado.scrollIntoView({ behavior: "smooth" });
     }
 
     carregarQuestoes();
