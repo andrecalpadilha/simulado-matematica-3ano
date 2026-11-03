@@ -1,15 +1,303 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulado de Matemática - 3º Ano EM</title>
-</head>
-<body>
-  <h1>Simulado de Matemática</h1>
-  <h2>3º Ano do Ensino Médio</h2>
+  <title>Simulado de Matemática — 3º ano EM</title>
+  <style>
+    * { box-sizing: border-box; }
 
-  <p>Bem-vindo ao simulado!</p>
-  <p>Prepare-se e boa prova!</p>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f5fa;
+      color: #202b3c;
+    }
+
+    header {
+      background: #172554;
+      color: white;
+      padding: 30px 18px;
+      text-align: center;
+    }
+
+    header h1 { margin: 0 0 10px; }
+    header p { margin: 5px 0; }
+
+    main {
+      width: min(900px, 94%);
+      margin: 25px auto;
+    }
+
+    .painel, .questao, .resultado {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 3px 12px #0000000d;
+    }
+
+    .progresso {
+      height: 10px;
+      background: #dce3ef;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+
+    #barra {
+      height: 100%;
+      width: 0;
+      background: #0d9488;
+      transition: width .2s;
+    }
+
+    .questao h3 { margin-top: 0; color: #172554; }
+
+    .alternativa {
+      display: block;
+      padding: 12px;
+      margin: 9px 0;
+      border: 1px solid #d7deea;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .alternativa:hover { background: #f0fdfa; }
+
+    .alternativa input {
+      margin-right: 9px;
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: 12px 0;
+      width: 100%;
+    }
+
+    td, th {
+      border: 1px solid #cbd5e1;
+      padding: 9px;
+      text-align: center;
+    }
+
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 13px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #finalizar {
+      background: #0d9488;
+      color: white;
+      width: 100%;
+      margin: 10px 0 25px;
+    }
+
+    #finalizar:hover { background: #0f766e; }
+
+    .resultado h2 { color: #172554; }
+
+    .correta { color: #15803d; font-weight: bold; }
+    .incorreta { color: #b91c1c; font-weight: bold; }
+
+    details {
+      margin-top: 12px;
+      padding: 12px;
+      background: #f1f5f9;
+      border-radius: 8px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: bold;
+      color: #172554;
+    }
+
+    .oculto { display: none; }
+
+    #mensagem {
+      text-align: center;
+      padding: 30px;
+      background: white;
+      border-radius: 12px;
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 24px 12px; }
+      .painel, .questao, .resultado { padding: 15px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Simulado de Matemática</h1>
+    <p>3º ano do Ensino Médio</p>
+    <p>32 questões • Avaliação e preparação para o ENEM</p>
+  </header>
+
+  <main>
+    <section class="painel">
+      <strong>Seu progresso</strong>
+      <p id="contador">Carregando questões...</p>
+      <div class="progresso"><div id="barra"></div></div>
+    </section>
+
+    <section id="prova"></section>
+
+    <button id="finalizar" class="oculto" onclick="finalizarSimulado()">
+      Finalizar simulado
+    </button>
+
+    <section id="resultado" class="resultado oculto"></section>
+    <p id="mensagem">Carregando o simulado...</p>
+  </main>
+
+  <script>
+    let questoes = [];
+    let respostas = {};
+    let finalizado = false;
+
+    async function carregarQuestoes() {
+      try {
+        const resposta = await fetch("./questoes.json");
+        if (!resposta.ok) throw new Error("Não foi possível acessar questoes.json.");
+
+        questoes = await resposta.json();
+
+        if (!Array.isArray(questoes) || questoes.length === 0) {
+          throw new Error("O arquivo de questões está vazio ou inválido.");
+        }
+
+        document.getElementById("mensagem").classList.add("oculto");
+        mostrarQuestoes();
+        atualizarProgresso();
+        document.getElementById("finalizar").classList.remove("oculto");
+      } catch (erro) {
+        document.getElementById("mensagem").textContent =
+          "Erro ao carregar as questões. Verifique se o arquivo questoes.json está publicado corretamente. " + erro.message;
+      }
+    }
+
+    function mostrarQuestoes() {
+      const area = document.getElementById("prova");
+      area.innerHTML = "";
+
+      questoes.forEach((q, indice) => {
+        const card = document.createElement("section");
+        card.className = "questao";
+
+        let conteudo = `
+          <h3>Questão ${q.n}</h3>
+          <p>${q.enunciado}</p>
+        `;
+
+        if (q.tabela) {
+          conteudo += `
+            <table>
+              <tbody>
+                ${q.tabela.map(linha => `
+                  <tr>${linha.map(celula => `<td>${celula}</td>`).join("")}</tr>
+                `).join("")}
+              </tbody>
+            </table>
+          `;
+        }
+
+        conteudo += q.alternativas.map((alternativa, i) => {
+          const letra = String.fromCharCode(65 + i);
+          return `
+            <label class="alternativa">
+              <input type="radio" name="questao${q.n}"
+                value="${letra}"
+                onchange="registrarResposta(${q.n}, '${letra}')">
+              <strong>${letra})</strong> ${alternativa}
+            </label>
+          `;
+        }).join("");
+
+        card.innerHTML = conteudo;
+        area.appendChild(card);
+      });
+    }
+
+    function registrarResposta(numero, letra) {
+      if (finalizado) return;
+      respostas[numero] = letra;
+      atualizarProgresso();
+    }
+
+    function atualizarProgresso() {
+      const respondidas = Object.keys(respostas).length;
+      const total = questoes.length;
+      document.getElementById("contador").textContent =
+        `${respondidas} de ${total} questões respondidas`;
+      document.getElementById("barra").style.width =
+        `${(respondidas / total) * 100}%`;
+    }
+
+    function finalizarSimulado() {
+      if (finalizado) return;
+
+      const emBranco = questoes.length - Object.keys(respostas).length;
+      if (emBranco > 0) {
+        const confirmar = confirm(
+          `Você deixou ${emBranco} questão(ões) sem resposta. Deseja finalizar mesmo assim?`
+        );
+        if (!confirmar) return;
+      }
+
+      finalizado = true;
+      let acertos = 0;
+
+      questoes.forEach(q => {
+        if (respostas[q.n] === q.gabarito) acertos++;
+      });
+
+      const percentual = (acertos / questoes.length * 100).toFixed(1);
+      const resultado = document.getElementById("resultado");
+
+      let html = `
+        <h2>Resultado do simulado</h2>
+        <p><strong>${acertos} de ${questoes.length} questões corretas</strong></p>
+        <p>Percentual de acertos: <strong>${percentual}%</strong></p>
+        <hr>
+        <h3>Correção comentada</h3>
+        <p>Confira sua resposta, o gabarito e a resolução de cada questão.</p>
+      `;
+
+      questoes.forEach(q => {
+        const marcada = respostas[q.n] || "Não respondeu";
+        const acertou = marcada === q.gabarito;
+
+        html += `
+          <article class="questao">
+            <h3>Questão ${q.n}</h3>
+            <p>Sua resposta: <strong>${marcada}</strong></p>
+            <p>Gabarito: <strong>${q.gabarito}</strong></p>
+            <p class="${acertou ? "correta" : "incorreta"}">
+              ${acertou ? "Resposta correta" : "Resposta incorreta"}
+            </p>
+            <details>
+              <summary>Ver resolução passo a passo</summary>
+              <p>${q.resolucao}</p>
+            </details>
+          </article>
+        `;
+      });
+
+      resultado.innerHTML = html;
+      resultado.classList.remove("oculto");
+      document.getElementById("finalizar").classList.add("oculto");
+      resultado.scrollIntoView({ behavior: "smooth" });
+    }
+
+    carregarQuestoes();
+  </script>
 </body>
 </html>
