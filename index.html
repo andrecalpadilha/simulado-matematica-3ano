@@ -1,360 +1,138 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simulado de Matemática — 3º ano EM</title>
-  <style>
-    * { box-sizing: border-box; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulado de Matemática | 3º EM</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f2f5fa;
-      color: #202b3c;
-    }
-
-    header {
-      background: #172554;
-      color: white;
-      padding: 30px 18px;
-      text-align: center;
-    }
-
-    header h1 { margin: 0 0 10px; }
-    header p { margin: 5px 0; }
-
-    main {
-      width: min(900px, 94%);
-      margin: 25px auto;
-    }
-
-    .painel, .questao, .resultado {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 18px;
-      box-shadow: 0 3px 12px #0000000d;
-    }
-
-    .progresso {
-      height: 10px;
-      background: #dce3ef;
-      border-radius: 20px;
-      overflow: hidden;
-      margin-top: 12px;
-    }
-
-    #barra {
-      height: 100%;
-      width: 0;
-      background: #0d9488;
-      transition: width .2s;
-    }
-
-    .questao h3 { margin-top: 0; color: #172554; }
-
-    .alternativa {
-      display: block;
-      padding: 12px;
-      margin: 9px 0;
-      border: 1px solid #d7deea;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    .alternativa:hover { background: #f0fdfa; }
-
-    .alternativa input {
-      margin-right: 9px;
-    }
-
-    table {
-      border-collapse: collapse;
-      margin: 12px 0;
-      width: 100%;
-    }
-
-    td, th {
-      border: 1px solid #cbd5e1;
-      padding: 9px;
-      text-align: center;
-    }
-
-    button {
-      border: 0;
-      border-radius: 8px;
-      padding: 13px 20px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    #finalizar {
-      background: #0d9488;
-      color: white;
-      width: 100%;
-      margin: 10px 0 25px;
-    }
-
-    #finalizar:hover { background: #0f766e; }
-
-    .resultado h2 { color: #172554; }
-
-    .correta { color: #15803d; font-weight: bold; }
-    .incorreta { color: #b91c1c; font-weight: bold; }
-
-    details {
-      margin-top: 12px;
-      padding: 12px;
-      background: #f1f5f9;
-      border-radius: 8px;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-      color: #172554;
-    }
-
-    .oculto { display: none; }
-
-    #mensagem {
-      text-align: center;
-      padding: 30px;
-      background: white;
-      border-radius: 12px;
-    }
-
-    @media (max-width: 600px) {
-      header { padding: 24px 12px; }
-      .painel, .questao, .resultado { padding: 15px; }
-    }
-  </style>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f0f4fa;color:#163152;font:16px system-ui,Arial}
+.top{background:#12345d;color:white;padding:22px max(20px,calc((100% - 950px)/2))}
+.top h1{margin:6px 0}
+.top small{color:#cbdff9}
+.wrap{max-width:950px;margin:28px auto;padding:0 18px}
+.card{background:white;border:1px solid #dce5f0;border-radius:16px;padding:28px;box-shadow:0 8px 30px #16315213}
+.hidden{display:none!important}
+.muted{color:#60738a}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.clock{font-weight:800;color:#b42b42}
+label.field{display:block;font-weight:700;margin:15px 0 6px}
+input.field,select{width:100%;padding:12px;border:1px solid #cad7e6;border-radius:9px;font:inherit}
+.btn{background:#1c62b1;border:0;color:white;border-radius:9px;padding:12px 17px;cursor:pointer;font:inherit;font-weight:700}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.sub{background:#e8eff8;color:#244c78}
+.nav{display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap;margin-top:23px}
+.meter{height:9px;background:#e6edf5;border-radius:20px;overflow:hidden;margin:12px 0}
+.meter div{height:100%;background:#2471c8;width:0}
+.numbers{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0}
+.numbers button{border:1px solid #cedae8;background:white;border-radius:7px;padding:8px;min-width:38px;cursor:pointer}
+.numbers .active{outline:2px solid #2367b7}
+.numbers .answered{background:#d9f1e4}
+.qtext{font-size:1.2rem;line-height:1.6;margin:18px 0;white-space:pre-wrap}
+.choice{display:flex;gap:12px;align-items:center;border:1px solid #d5e0ed;padding:14px;border-radius:10px;margin:9px 0;cursor:pointer}
+.choice:has(input:checked){background:#e6f1ff;border-color:#2a70bc}
+.hint{background:#fff5d4;color:#72500e;border:1px solid #e9c768;margin:12px 0;border-radius:9px;padding:10px 14px;cursor:pointer;font:inherit;font-weight:700}
+.hintbox{background:#fff9e9;border-left:4px solid #e9bb3d;padding:13px;margin:8px 0 16px;line-height:1.5}
+.qt{border-collapse:collapse;max-width:600px;width:100%;margin:15px 0}
+.qt td{border:1px solid #d1dbea;text-align:center;padding:10px}
+.notice{padding:13px;background:#f0f6fd;border-radius:9px;margin:15px 0}
+footer{text-align:center;color:#718198;padding:18px}
+#status{color:#a42a3b;font-weight:600}
+.review{padding:13px;border:1px solid #dce5f0;border-radius:10px;margin:10px 0}
+.good{border-left:5px solid #23965b}
+.bad{border-left:5px solid #c64a4a}
+.review small{color:#60738a}
+.review p{margin:7px 0}
+@media(max-width:600px){
+.card{padding:18px}
+.top{padding:18px}
+.row{align-items:flex-start;flex-direction:column}
+.nav .btn{flex:1}
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <h1>Simulado de Matemática</h1>
-    <p>3º ano do Ensino Médio</p>
-    <p>32 questões • Avaliação e preparação para o ENEM</p>
-  </header>
 
-<main>
-    <section class="painel">
-      <h2>Identificação do aluno</h2>
+<header class="top">
+<small>SESI · ENSINO MÉDIO</small>
+<h1>Simulado de Matemática — 3º Ano</h1>
+<small>32 questões · 5 alternativas · 2h30</small>
+</header>
 
-      <label for="nomeAluno">Nome completo:</label>
-      <input type="text" id="nomeAluno" placeholder="Digite seu nome completo"
-        required style="width:100%; padding:12px; margin:8px 0 15px; border:1px solid #cbd5e1; border-radius:8px;">
+<main class="wrap">
 
-      <label for="turmaAluno">Turma:</label>
-      <input type="text" id="turmaAluno" placeholder="Ex.: 3º EM A"
-        required style="width:100%; padding:12px; margin:8px 0; border:1px solid #cbd5e1; border-radius:8px;">
-    </section>
+<section class="card" id="start">
+<h2>Identificação do aluno</h2>
+<p class="muted">Preencha seus dados para iniciar. Não utilize calculadora.</p>
 
-    <section class="painel">
-      <strong>Seu progresso</strong>
-      <p id="contador">Carregando questões...</p>
-      <div class="progresso"><div id="barra"></div></div>
-    </section>
+<form id="form">
 
-    <section id="prova"></section>
+<label class="field" for="nome">Nome completo</label>
+<input class="field" id="nome" minlength="3" maxlength="120" required>
 
-    <button id="finalizar" class="oculto" onclick="finalizarSimulado()">
-      Finalizar simulado
-    </button>
+<label class="field" for="numero">Número de chamada</label>
+<input class="field" id="numero" type="number" min="1" max="60">
 
-    <section id="resultado" class="resultado oculto"></section>
-    <p id="mensagem">Carregando o simulado...</p>
-  </main>
+<label class="field" for="turma">Turma</label>
+<input class="field" id="turma" maxlength="30" placeholder="Ex.: 3º A" required>
 
-  <script>
-    let questoes = [];
-    let respostas = {};
-    let finalizado = false;
+<div class="notice">
+Ao iniciar, o cronômetro de 2h30 começará. Suas respostas serão corrigidas ao finalizar.
+</div>
 
-    async function carregarQuestoes() {
-      try {
-        const resposta = await fetch("./questoes.json");
-        if (!resposta.ok) throw new Error("Não foi possível acessar questoes.json.");
+<button class="btn" type="submit">Iniciar simulado</button>
+</form>
+</section>
 
-        questoes = await resposta.json();
+<section id="exam" class="card hidden">
 
-        if (!Array.isArray(questoes) || questoes.length === 0) {
-          throw new Error("O arquivo de questões está vazio ou inválido.");
-        }
+<div class="row">
+<strong id="who"></strong>
+<span class="clock" id="clock">02:30:00</span>
+</div>
 
-        document.getElementById("mensagem").classList.add("oculto");
-        mostrarQuestoes();
-        atualizarProgresso();
-        document.getElementById("finalizar").classList.remove("oculto");
-      } catch (erro) {
-        document.getElementById("mensagem").textContent =
-          "Erro ao carregar as questões. Verifique se o arquivo questoes.json está publicado corretamente. " + erro.message;
-      }
-    }
+<p id="progress" class="muted"></p>
+<div class="meter"><div id="bar"></div></div>
+<div class="numbers" id="numbers"></div>
 
-    function mostrarQuestoes() {
-      const area = document.getElementById("prova");
-      area.innerHTML = "";
+<hr style="border:0;border-top:1px solid #e3eaf2;margin:23px 0">
 
-      questoes.forEach((q, indice) => {
-        const card = document.createElement("section");
-        card.className = "questao";
+<h2 id="qn"></h2>
+<p class="muted" id="tipo"></p>
+<div class="qtext" id="qtext"></div>
+<div id="qtable"></div>
 
-        let conteudo = `
-          <h3>Questão ${q.n}</h3>
-          <p>${q.enunciado}</p>
-        `;
+<button class="hint" type="button" id="hintbtn" aria-expanded="false">💡 Ver dica</button>
+<div class="hintbox hidden" id="hintbox"></div>
 
-        if (q.tabela) {
-          conteudo += `
-            <table>
-              <tbody>
-                ${q.tabela.map(linha => `
-                  <tr>${linha.map(celula => `<td>${celula}</td>`).join("")}</tr>
-                `).join("")}
-              </tbody>
-            </table>
-          `;
-        }
+<div id="choices"></div>
 
-        conteudo += q.alternativas.map((alternativa, i) => {
-          const letra = String.fromCharCode(65 + i);
-          return `
-            <label class="alternativa">
-              <input type="radio" name="questao${q.n}"
-                value="${letra}"
-                onchange="registrarResposta(${q.n}, '${letra}')">
-              <strong>${letra})</strong> ${alternativa}
-            </label>
-          `;
-        }).join("");
+<div class="nav">
+<button class="btn sub" id="prev" type="button">Anterior</button>
+<button class="btn sub" id="next" type="button">Próxima</button>
+<button class="btn" id="finish" type="button">Finalizar e enviar</button>
+</div>
 
-        card.innerHTML = conteudo;
-        area.appendChild(card);
-      });
-    }
+<p id="status" role="status"></p>
+</section>
 
-    function registrarResposta(numero, letra) {
-      if (finalizado) return;
-      respostas[numero] = letra;
-      atualizarProgresso();
-    }
+<section id="done" class="card hidden">
+<h2>Simulado finalizado!</h2>
+<div class="notice" id="result"></div>
+<p class="muted" id="receipt"></p>
+<h3>Correção das questões</h3>
+<div id="details"></div>
+</section>
 
-    function atualizarProgresso() {
-      const respondidas = Object.keys(respostas).length;
-      const total = questoes.length;
-      document.getElementById("contador").textContent =
-        `${respondidas} de ${total} questões respondidas`;
-      document.getElementById("barra").style.width =
-        `${(respondidas / total) * 100}%`;
-    }
-function enviarResultado(dados) {
-  const url = "https://script.google.com/macros/s/AKfycbww5lGmDEWpQhWVNw3hYHtWvehTzPYtffCM_a9HeBzQ07CujuZV1uuga12DQX3amuEA/exec";
+</main>
 
-  const iframe = document.createElement("iframe");
-  iframe.name = "envioSimulado";
-  iframe.style.display = "none";
-  document.body.appendChild(iframe);
+<footer>Simulado escolar · Matemática · 3º Ano do Ensino Médio</footer>
 
-  const formulario = document.createElement("form");
-  formulario.method = "POST";
-  formulario.action = url;
-  formulario.target = "envioSimulado";
+<script src="config.js"></script>
+<script src="dicas.js"></script>
+<script src="app.js"></script>
 
-  const campo = document.createElement("input");
-  campo.type = "hidden";
-  campo.name = "payload";
-  campo.value = JSON.stringify(dados);
-
-  formulario.appendChild(campo);
-  document.body.appendChild(formulario);
-
-  formulario.submit();
-
-  document.getElementById("statusEnvio").textContent =
-    "Resultado enviado. Aguarde a confirmação do professor.";
-
-  setTimeout(() => {
-    formulario.remove();
-    iframe.remove();
-  }, 10000);
-}
-    function finalizarSimulado() {
-      if (finalizado) return;
-const nome = document.getElementById("nomeAluno").value.trim();
-const turma = document.getElementById("turmaAluno").value.trim();
-
-if (!nome || !turma) {
-  alert("Preencha seu nome e sua turma antes de finalizar.");
-  return;
-}
-      const emBranco = questoes.length - Object.keys(respostas).length;
-      if (emBranco > 0) {
-        const confirmar = confirm(
-          `Você deixou ${emBranco} questão(ões) sem resposta. Deseja finalizar mesmo assim?`
-        );
-        if (!confirmar) return;
-      }
-
-      finalizado = true;
-      let acertos = 0;
-
-      questoes.forEach(q => {
-        if (respostas[q.n] === q.gabarito) acertos++;
-      });
-
-      const percentual = (acertos / questoes.length * 100).toFixed(1);
-      const resultado = document.getElementById("resultado");
-
-      let html = `
-        <h2>Resultado do simulado</h2>
-        <p><strong>${acertos} de ${questoes.length} questões corretas</strong></p>
-        <p>Percentual de acertos: <strong>${percentual}%</strong></p>
-        <p id="statusEnvio">Enviando resultado para a planilha...</p>
-        <hr>
-        <h3>Correção comentada</h3>
-        <p>Confira sua resposta, o gabarito e a resolução de cada questão.</p>
-      `;
-
-      questoes.forEach(q => {
-        const marcada = respostas[q.n] || "Não respondeu";
-        const acertou = marcada === q.gabarito;
-
-        html += `
-          <article class="questao">
-            <h3>Questão ${q.n}</h3>
-            <p>Sua resposta: <strong>${marcada}</strong></p>
-            <p>Gabarito: <strong>${q.gabarito}</strong></p>
-            <p class="${acertou ? "correta" : "incorreta"}">
-              ${acertou ? "Resposta correta" : "Resposta incorreta"}
-            </p>
-            <details>
-              <summary>Ver resolução passo a passo</summary>
-              <p>${q.resolucao}</p>
-            </details>
-          </article>
-        `;
-      });
-
-      resultado.innerHTML = html;
-      resultado.classList.remove("oculto");
-document.getElementById("finalizar").classList.add("oculto");
-
-enviarResultado({
-  nome: nome,
-  turma: turma,
-  acertos: acertos,
-  total: questoes.length,
-  respostas: respostas
-});
-
-resultado.scrollIntoView({ behavior: "smooth" });
-    }
-
-    carregarQuestoes();
-  </script>
 </body>
 </html>
